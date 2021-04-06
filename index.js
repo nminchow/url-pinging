@@ -12,7 +12,7 @@ urls.map(url => {
     // You could also write to a file here, if that would be desirable.
     // Note that you are in a `map` loop, so you will need to write to the file
     // and ensure you get all of the responses before you close it.
-    console.log(url, response.status);
+    console.log(url, response.headers['content-type'] == 'image/gif');
   })
   .catch(error => {
     console.log(error);
